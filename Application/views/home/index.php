@@ -1,7 +1,2 @@
-<div class="container">
-  <div class="row">
-    <div class="col-8 offset-2 text-center" style="margin-top:150px">
-      <h1>Numerar</h1>
-    </div>
-  </div>
-</div>
+<h1>Bem-vindo ao nosso site!</h1>
+<p>Este é um exemplo de layout usando HTML e Bootstrap.</p>

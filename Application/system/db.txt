@@ -1,0 +1,5 @@
+server: srv1082.hstgr.io
+banco: u375395381_numerar
+user: u375395381_root
+senha: Server-123
+

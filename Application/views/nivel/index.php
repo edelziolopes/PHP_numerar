@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-8 offset-2 text-center" style="margin-top:150px">
+    <div class="col-8 offset-2 text-center">
       <h1>Categoria</h1>
     </div>
   </div>
