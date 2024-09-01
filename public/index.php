@@ -27,6 +27,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/nivel">Nivel</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sistema">Sistema</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/unidade">Unidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ano">Ano</a>
+                    </li>
                 </ul>
             </div>
         </div>

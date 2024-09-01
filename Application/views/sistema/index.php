@@ -1,8 +1,12 @@
-<h2>Cadastro de Níveis</h2>
-<form action="/nivel/create" method="POST">
+<h2>Cadastro de Sistemas</h2>
+<form action="/sistema/create" method="POST">
     <div class="mb-3">
-        <label for="nivel" class="form-label">Nível</label>
-        <input type="text" class="form-control" id="nivel" name="nivel" required>
+        <label for="sistema" class="form-label">Sistema</label>
+        <input type="text" class="form-control" id="sistema" name="sistema" required>
+    </div>
+    <div class="mb-3">
+        <label for="uf" class="form-label">UF</label>
+        <input type="text" class="form-control" id="uf" name="uf" required>
     </div>
     <div class="mb-3">
         <label for="descricao" class="form-label">Descrição</label>
@@ -13,25 +17,27 @@
 
 <hr>
 
-<h3 class="mt-5">Lista de Níveis</h3>
+<h3 class="mt-5">Lista de Sistemas</h3>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Nível</th>
+      <th scope="col">Sistema</th>
+      <th scope="col">UF</th>
       <th scope="col">Descrição</th>
       <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($data['niveis'] as $nivel) { ?>
+    <?php foreach ($data['sistemas'] as $sistema) { ?>
     <tr>
-      <td><?= $nivel['id'] ?></td>
-      <td><?= $nivel['nivel'] ?></td>
-      <td><?= $nivel['descricao'] ?></td>
+      <td><?= $sistema['id'] ?></td>
+      <td><?= $sistema['sistema'] ?></td>
+      <td><?= $sistema['uf'] ?></td>
+      <td><?= $sistema['descricao'] ?></td>
       <td>
-        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $nivel['id'] ?>" data-nivel="<?= $nivel['nivel'] ?>" data-descricao="<?= $nivel['descricao'] ?>">Editar</button>
-        <a href="/nivel/delete  /<?= $nivel['id'] ?>" class="btn btn-sm btn-danger">Excluir</a>
+        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $sistema['id'] ?>" data-sistema="<?= $sistema['sistema'] ?>" data-uf="<?= $sistema['uf'] ?>" data-descricao="<?= $sistema['descricao'] ?>">Editar</button>
+        <a href="/sistema/deleteById/<?= $sistema['id'] ?>" class="btn btn-sm btn-danger">Excluir</a>
       </td>
     </tr>
     <?php } ?>
@@ -43,15 +49,19 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Editar Nível</h5>
+        <h5 class="modal-title" id="editModalLabel">Editar Sistema</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="/nivel/edit" method="POST">
+        <form action="/sistema/edit" method="POST">
           <input type="hidden" id="edit-id" name="id">
           <div class="mb-3">
-              <label for="edit-nivel" class="form-label">Nível</label>
-              <input type="text" class="form-control" id="edit-nivel" name="nivel" required>
+              <label for="edit-sistema" class="form-label">Sistema</label>
+              <input type="text" class="form-control" id="edit-sistema" name="sistema" required>
+          </div>
+          <div class="mb-3">
+              <label for="edit-uf" class="form-label">UF</label>
+              <input type="text" class="form-control" id="edit-uf" name="uf" required>
           </div>
           <div class="mb-3">
               <label for="edit-descricao" class="form-label">Descrição</label>
@@ -69,15 +79,18 @@
     editModal.addEventListener('show.bs.modal', function (event) {
       var button = event.relatedTarget
       var id = button.getAttribute('data-id')
-      var nivel = button.getAttribute('data-nivel')
+      var sistema = button.getAttribute('data-sistema')
+      var uf = button.getAttribute('data-uf')
       var descricao = button.getAttribute('data-descricao')
 
       var modalIdInput = editModal.querySelector('#edit-id')
-      var modalNivelInput = editModal.querySelector('#edit-nivel')
+      var modalSistemaInput = editModal.querySelector('#edit-sistema')
+      var modalUfInput = editModal.querySelector('#edit-uf')
       var modalDescricaoInput = editModal.querySelector('#edit-descricao')
 
       modalIdInput.value = id
-      modalNivelInput.value = nivel
+      modalSistemaInput.value = sistema
+      modalUfInput.value = uf
       modalDescricaoInput.value = descricao
     })
 </script>
