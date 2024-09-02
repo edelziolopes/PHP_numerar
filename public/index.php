@@ -36,6 +36,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/ano">Ano</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/objeto">Objeto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/habilidade">Habilidade</a>
+                    </li>
                 </ul>
             </div>
         </div>
