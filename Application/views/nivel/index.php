@@ -31,7 +31,7 @@
       <td><?= $nivel['descricao'] ?></td>
       <td>
         <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<?= $nivel['id'] ?>" data-nivel="<?= $nivel['nivel'] ?>" data-descricao="<?= $nivel['descricao'] ?>">Editar</button>
-        <a href="/nivel/delete  /<?= $nivel['id'] ?>" class="btn btn-sm btn-danger">Excluir</a>
+        <a href="/nivel/delete/<?= $nivel['id'] ?>" class="btn btn-sm btn-danger">Excluir</a>
       </td>
     </tr>
     <?php } ?>
