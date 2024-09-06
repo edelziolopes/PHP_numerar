@@ -4,7 +4,7 @@
         <label for="id_objeto" class="form-label">Objeto</label>
         <select class="form-control" id="id_objeto" name="id_objeto" required>
             <?php foreach ($data['objetos'] as $objeto) { ?>
-                <option value="<?= $objeto['id'] ?>"><?= $objeto['objeto'] ?></option>
+                <option value="<?= $objeto['id'] ?>"><?= $objeto['objeto'] ?> - <?= $objeto['ano'] ?></option>
             <?php } ?>
         </select>
     </div>
@@ -63,7 +63,7 @@
               <label for="edit-id_objeto" class="form-label">Objeto</label>
               <select class="form-control" id="edit-id_objeto" name="id_objeto" required>
                 <?php foreach ($data['objetos'] as $objeto) { ?>
-                    <option value="<?= $objeto['id'] ?>"><?= $objeto['objeto'] ?></option>
+                    <option value="<?= $objeto['id'] ?>"><?= $objeto['objeto'] ?> - <?= $objeto['ano'] ?></option>
                 <?php } ?>
               </select>
           </div>

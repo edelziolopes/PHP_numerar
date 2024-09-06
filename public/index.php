@@ -31,16 +31,25 @@
                         <a class="nav-link" href="/sistema">Sistema</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/unidade">Unidade</a>
+                        <a class="nav-link" href="/ano">Ano</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/ano">Ano</a>
+                        <a class="nav-link" href="/unidade">Unidade</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/objeto">Objeto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/habilidade">Habilidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/descritor">Descritor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/alinhamento">Alinhamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/exercicio">Exercicio</a>
                     </li>
                 </ul>
             </div>

@@ -6,7 +6,7 @@
     </div>
     <div class="mb-3">
         <label for="descricao" class="form-label">Descrição</label>
-        <textarea class="form-control" id="descricao" name="descricao" rows="3" required></textarea>
+        <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
@@ -55,7 +55,7 @@
           </div>
           <div class="mb-3">
               <label for="edit-descricao" class="form-label">Descrição</label>
-              <textarea class="form-control" id="edit-descricao" name="descricao" rows="3" required></textarea>
+              <textarea class="form-control" id="edit-descricao" name="descricao" rows="3"></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Salvar Alterações</button>
         </form>
